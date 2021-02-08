@@ -5,6 +5,8 @@ import HeroIMG from "./images/bg.jpg"
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import Countdown from 'react-countdown';
+import TypeWriterEffect from 'react-typewriter-effect';
+
 
 
 
@@ -12,18 +14,6 @@ class Hero extends Component{
   constructor(props){
     super(props);
 
-  }
-  msToTime(duration) {
-    var milliseconds = parseInt((duration%1000)/100)
-        , seconds = parseInt((duration/1000)%60)
-        , minutes = parseInt((duration/(1000*60))%60)
-        , hours = parseInt((duration/(1000*60*60))%24);
-
-    hours = (hours < 10) ? "0" + hours : hours;
-    minutes = (minutes < 10) ? "0" + minutes : minutes;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-    return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
   }
 
   render(){
@@ -48,7 +38,16 @@ class Hero extends Component{
                   margin:"0px"}}
         >
           <Grid  item xs={12}>
-            <p style={{fontSize:"100px", padding:"0px", margin:"0px"}}> HackSmith</p>
+            <TypeWriterEffect
+              textStyle={{ fontFamily:"'Source Code Pro', monospace", fontSize:"100px", padding:"0px", margin:"0px"}}
+              startDelay={100}
+              cursorColor="black"
+              text="HackSmith"
+              typeSpeed={100}
+              hideCursorAfterText={true}
+            >
+
+            </TypeWriterEffect>
             <p style={{fontSize:"75px", padding:"0px", margin:"0px"}}>2021</p>
             <p style={{fontSize:"25px", padding:"10px", margin:"0px",
                       fontFamily:"Arial",
@@ -56,7 +55,7 @@ class Hero extends Component{
                       paddingLeft:"50px"}}>
             <p style={{fontSize:"30px"}}>March 26th-27th</p>
             <p style={{fontSize:"18px"}}>
-            <Countdown date={Date.parse('26 Mar 2021 00:11:00 EST')} style={{fontSize:"30px"}}/> until hacking begins.
+            <Countdown date={Date.parse('26 Mar 2021 00:11:00 EST')} style={{fontSize:"30px"}}/> until the day hacking begins.
             </p>
             </p>
             <Button href={this.props.link} color="primary" style={{backgroundColor:"#2b2b2b",
@@ -66,6 +65,9 @@ class Hero extends Component{
                                                                     padding:"10px",
                                                                     textTransform: "none",
                                                                     color:"white",
+                                                                    borderRadius:"50px",
+                                                                    paddingLeft:"50px",
+                                                                    paddingRight:"50px",
                                                                     }}>Register Now</Button>
           </Grid>
         </Grid>

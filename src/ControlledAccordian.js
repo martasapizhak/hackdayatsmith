@@ -3,29 +3,20 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import { useTheme, makeStyles, withStyles } from '@material-ui/core/styles';
 
 
-const useStyles = theme => ({
-  root: {
-    width: '100%',
-    color:"red",
-  },
-  heading: {
-    flexBasis: '33.33%',
-    flexShrink: 0,
-    color: "red",
-  },
+const styles = theme => ({
   expansion: {
-    backgroundColor:"red"
-  },
-  secondaryHeading: {
-    color: "red",
-  },
+    backgroundImage:
+      'url("https://media.istockphoto.com/photos/plant-growing-picture-id510222832?k=6&m=510222832&s=612x612&w=0&h=Pzjkj2hf9IZiLAiXcgVE1FbCNFVmKzhdcT98dcHSdSk=")',
+    width: "50%"
+  }
 });
 
-const ControlledAccordion = () =>{
-  const classes = useStyles();
+function ControlledAccordion(props){
+  const classes = props;
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -40,12 +31,11 @@ const ControlledAccordion = () =>{
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-        <b>R</b>
+        <b>Do I need to know how to code to participate in HackSmith?</b>
         </AccordionSummary>
         <AccordionDetails>
         <div>
-          <a href="https://www.statmethods.net/r-tutorial/index.html">R</a> is a programming language oriented around doing statistical analysis and designing data visualizations. R excels for tasks like
-          creating regression models, machine learning, and quickly exploring data using libraries like <a href="https://www.datacamp.com/community/tutorials/tidyverse-tutorial-r">Tidyverse.</a>
+          All skill levels and backgrounds are welcome, whether that involves tech, art, or history.
         </div>
         </AccordionDetails>
       </Accordion>
@@ -55,14 +45,11 @@ const ControlledAccordion = () =>{
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-        <b>Python</b>
+        <b>Is there anything I should do beforehand?</b>
         </AccordionSummary>
         <AccordionDetails>
         <div>
-          <a href="https://www.w3schools.com/python/">Python</a> is a programming language used for a variety of tasks. For example, Python can be used to create data visualizations
-          using libraries like Dash, Matplotlib, and Seaborn combined with Pandas and Numpy. Python can also be used for many machine learning
-          tasks, with libraries like Scikit-learn and Tensorflow. Python can also be used to create a RESTful API with libraries like <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/">Flask.</a>
-          Restful APIS are useful for sending data between the client and the server using JSON files.
+          Please register using the link in the header and join our Discord server here (put in link). Otherwise, you're all done!
         </div>
         </AccordionDetails>
       </Accordion>
@@ -81,7 +68,7 @@ const ControlledAccordion = () =>{
         </div>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} className={classes.expansion}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel4bh-content"
@@ -135,4 +122,11 @@ const ControlledAccordion = () =>{
     </div>
   )
 }
-export default withStyles(useStyles)(ControlledAccordion)
+
+
+ControlledAccordion.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+
+export default withStyles(styles)(ControlledAccordion)
