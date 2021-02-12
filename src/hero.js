@@ -55,7 +55,7 @@ class Hero extends Component{
                       paddingLeft:"50px"}}>
             <p style={{fontSize:"30px"}}>March 26th-27th</p>
             <p style={{fontSize:"18px"}}>
-            <Countdown date={Date.parse('26 Mar 2021 00:11:00 EST')} style={{fontSize:"30px"}}/> until the day hacking begins.
+            <Countdown date={Date.parse('26 Mar 2021 11:00:00 EST')} style={{fontSize:"30px"}}/> until hacking begins.
             </p>
             </p>
             <Button href={this.props.link} color="primary" style={{backgroundColor:"#2b2b2b",

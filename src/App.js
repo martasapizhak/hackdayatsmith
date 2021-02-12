@@ -6,14 +6,10 @@ import Hero from "./hero.js"
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import Accordian from "./ControlledAccordian.js"
+import Tracks from "./tracks.js";
 
 
-class App extends Component{
-  constructor(props){
-    super(props);
-
-  }
-  render(){
+function App(){
     return (
       <div>
         <Hero link="https://www.google.com/" class="heroImg" />
@@ -27,7 +23,7 @@ class App extends Component{
               <h1>Our Sponsors</h1>
               HackSmith wouldn't be possible without the generosity of Audible, the Conway Center for Innovation, Google, and MassMutual.
               <h1>Tracks</h1>
-                TBD
+                <Tracks />
               <h1>Schedule</h1>
                 TBD
               <h1>FAQ</h1>
@@ -40,7 +36,6 @@ class App extends Component{
         </div>
       </div>
     );
-  }
 }
 
 export default App;

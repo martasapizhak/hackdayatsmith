@@ -25,6 +25,21 @@ function ControlledAccordion(props){
 
   return (
     <div className={classes.root}>
+    <Accordion expanded={expanded === 'panel0'} onChange={handleChange('panel0')} className = {classes.expansion}>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel1bh-content"
+        id="panel1bh-header"
+      >
+      <b>What is a hackathon?</b>
+      </AccordionSummary>
+      <AccordionDetails>
+      <div>
+        A hackathon is an event where people join teams and work on a programming or otherwise technical project over a short period of time.
+        The projects are then judged in different "tracks" which are categories that have different prizes.
+      </div>
+      </AccordionDetails>
+    </Accordion>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} className = {classes.expansion}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -35,7 +50,7 @@ function ControlledAccordion(props){
         </AccordionSummary>
         <AccordionDetails>
         <div>
-          All skill levels and backgrounds are welcome, whether that involves tech, art, or history.
+          All skill levels and backgrounds are welcome, whether that involves tech, art, history, or anything else.
         </div>
         </AccordionDetails>
       </Accordion>
@@ -59,12 +74,11 @@ function ControlledAccordion(props){
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
-        <b>HTML/CSS</b>
+        <b>Do I need to have a team when I join?</b>
         </AccordionSummary>
         <AccordionDetails>
         <div>
-          <a href="https://www.w3schools.com/html/default.asp">HTML/CSS</a> (HyperText Markup Language and Cascading Style Sheets) are the languages used to define and format data on the web. HTML describes how
-          information is laid out on the web and CSS describes what it looks like.
+          You can work on your own team if you would prefer, but we will have a team matching activity for people who are interested!
         </div>
         </AccordionDetails>
       </Accordion>
@@ -74,14 +88,11 @@ function ControlledAccordion(props){
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-        <b>JavaScript/React/Node</b>
+        <b>How will HackSmith be run?</b>
         </AccordionSummary>
         <AccordionDetails>
         <div>
-          <a href="https://www.w3schools.com/js/js_intro.asp">JavaScript</a> is the native programming language of the web. It can modify the HTML and CSS of a webpage as well and is able to do anything that
-          another programming language can do. Javascript is the language used for developing data visualizations on the web as well, using libraries like Plotly, D3.js, and VisJS. <a href="https://www.w3schools.com/react/default.asp">React</a> is a JavaScript
-          framework used to make web design modular using ideas like components and the state.
-          This website is written in React! There are other web frameworks as well. <a href="https://www.w3schools.com/nodejs/default.asp">Node.js</a> is another server similar to Flask written in JavaScript.
+          HackSmith will be run on Discord with live events happening over Zoom. A link to the Discord server will be emailed to people who have registered and put on this website closer to the event. Hacks will be submitted on Devpost.
         </div>
         </AccordionDetails>
       </Accordion>
@@ -91,14 +102,11 @@ function ControlledAccordion(props){
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-        <b>Databases</b>
+        <b>Placeholder</b>
         </AccordionSummary>
         <AccordionDetails>
         <div>
-          Databases are ways to store large amounts of information. Relational databases use large tables of information with a structored format which can be joined together.
-          You "ask" a relational database a question using <a href="https://www.w3schools.com/sql/">SQL</a> (Structured Query Language), so relational databases are frequently called SQL databases.
-          Databases which store information differently from relational databases are called NoSQL databases and there's a lot of variety in them. Other varieties of
-          databases include key-value databases like <a href="https://cassandra.apache.org/">Cassandra</a>, graph databases like <a href="https://neo4j.com/">neo4j</a>, document databases like <a href="https://www.mongodb.com/">MongoDB</a>, and many others.
+        Placeholder
         </div>
         </AccordionDetails>
       </Accordion>
@@ -108,14 +116,11 @@ function ControlledAccordion(props){
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-        <b>The Cloud</b>
+        <b>Are students from other colleges welcome?</b>
         </AccordionSummary>
         <AccordionDetails>
         <div>
-          When running a website with a server, people need to run that server at all times so that the client can always reach it. Instead of running it on their computers,
-          most of them pay another company to run it on their computers instead. They can also run databases, machine learning models, etc. This is the cloud.
-          Companies like <a href="https://aws.amazon.com/">Amazon</a>, <a href="https://azure.microsoft.com/en-us/">Microsoft</a>, <a href="https://cloud.google.com/">Google</a>, and <a href="https://www.ibm.com/cloud">IBM</a> all provide these services. The
-          most beginner friendly are probably Amazon Web Services or <a href="https://www.heroku.com/">Heroku</a>.
+          Yes! Students from other colleges and universities are more than welcome.
         </div>
         </AccordionDetails>
       </Accordion>
