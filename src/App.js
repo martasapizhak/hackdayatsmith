@@ -28,7 +28,10 @@ function App(){
               include the Computer and Data science departments and the Conway Center for Innovation. HackSmith is an opportunity to try out new challenges, attend workshops, and meet new people. We aim to foster a space for interdisciplinary creativity.
               <h1>Our Sponsors</h1>
               HackSmith wouldn't be possible without the generosity of Audible, the Conway Center for Innovation, The Design Thinking Initiative, Google, and MassMutual.
-              <h2>Design Thinking Initiative support</h2>
+              <h2>Design Thinking Initiative Support</h2>
+              If you're interested in checking out physical materials (including Arduino Kits) from the Design Thinking Initiative, please sign up to do so <a href="https://www.librarycat.org/lib/designthinking">here!</a>
+              There will be a physical drop-off point for those who are interested.
+
 
               <h1>Tracks</h1>
                 <Tracks />
