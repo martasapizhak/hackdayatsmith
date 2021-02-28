@@ -74,11 +74,11 @@ function ControlledAccordion(props){
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
-        <b>Do I need to have a team when I join?</b>
+        <b>What will teams be like?</b>
         </AccordionSummary>
         <AccordionDetails>
         <div>
-          You can work on your own team if you would prefer, but we will have a team matching activity for people who are interested!
+          People are welcome to work on their own or on teams of up to 4 people. There will also be a team matching activity for people who are interested!
         </div>
         </AccordionDetails>
       </Accordion>
