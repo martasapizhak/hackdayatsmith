@@ -12,6 +12,7 @@
     "react": "^17.0.1",
     "react-countdown": "^2.3.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
@@ -19,7 +20,7 @@
     "serve": "^11.3.2",
     "web-vitals": "^1.1.0"
   },
-  "homepage": "https://anandamontoly.github.io/hackdayatsmith",
+  "homepage": "https://hacksmith.com",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

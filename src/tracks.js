@@ -21,7 +21,7 @@ function createData(name, description, prize, sponsor) {
 const rows = [
   createData("Most Innovative", "This award goes to the most innovative and entrepreneurial hack.", "$300 to the team", "The Conway Center for Innovation"),
   createData("Best Use of Data", "For the best use of data in visualizaton, modeling, or other related tasks", "Fujifilm Instax Camera", "MassMutual"),
-  createData("Best in Design Thinking", "For the best display of design thinking principles.", "TBD", "The Design Thinking Initiative"),
+  createData("Best in Design Thinking", "For the best display of design thinking principles.", "Design and Crafting Kit with TDI Swag", "The Design Thinking Initiative"),
 ];
 
 export default function BasicTable() {

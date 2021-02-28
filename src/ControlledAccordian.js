@@ -96,20 +96,6 @@ function ControlledAccordion(props){
         </div>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel4bh-content"
-          id="panel4bh-header"
-        >
-        <b>Placeholder</b>
-        </AccordionSummary>
-        <AccordionDetails>
-        <div>
-        Placeholder
-        </div>
-        </AccordionDetails>
-      </Accordion>
       <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
