@@ -64,7 +64,7 @@ function ControlledAccordion(props){
         </AccordionSummary>
         <AccordionDetails>
         <div>
-          Please register using the link in the header and join our Discord server here (put in link). Otherwise, you're all done!
+          Please register using the link in the header and join our Discord server once we send it out. Otherwise, you're all done!
         </div>
         </AccordionDetails>
       </Accordion>
