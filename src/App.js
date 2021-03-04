@@ -25,7 +25,7 @@ function App(){
             <Grid item xs={1}></Grid>
             <Grid item xs={10}>
               <h1>What is HackSmith?</h1>
-              <p>HackSmith is a virtual 24 hour Smith College hackathon run by Smithies in CS and the Statistical and Data Sciences Coalition of Color. Our corporate sponsors include Google, MassMutual, and Audible and our on-campus supporters
+              <p>HackSmith is a virtual 24 hour Smith College hackathon run by Smithies in CS, Smithies in SDS, and the SDS Coalition of Color. Our corporate sponsors include Google, MassMutual, and Audible and our on-campus supporters
               include the Computer and Data science departments and the Conway Center for Innovation. HackSmith is an opportunity to try out new challenges, attend workshops, and meet new people. We aim to foster a space for interdisciplinary creativity.
               <h1>Our Sponsors</h1>
               HackSmith wouldn't be possible without the generosity of Audible, the Conway Center for Innovation, The Design Thinking Initiative, Google, and MassMutual.
