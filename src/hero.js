@@ -58,7 +58,7 @@ class Hero extends Component{
             <Countdown date={Date.parse('26 Mar 2021 11:00:00 EST')} style={{fontSize:"30px"}}/> until hacking begins.
             </p>
             </p>
-            <Button href={this.props.link} color="primary" style={{backgroundColor:"#2b2b2b",
+            <Button href="#" color="primary" style={{backgroundColor:"#2b2b2b",
                                                                     fontSize:"18px",
                                                                     fontFamily:"Arial",
                                                                     margin:"0px",
@@ -68,7 +68,7 @@ class Hero extends Component{
                                                                     borderRadius:"50px",
                                                                     paddingLeft:"50px",
                                                                     paddingRight:"50px",
-                                                                    }}>Register Now</Button>
+                                                                  }}>Registration is Closed</Button>
           </Grid>
         </Grid>
       </div>

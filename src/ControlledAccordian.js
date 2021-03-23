@@ -78,7 +78,7 @@ function ControlledAccordion(props){
         </AccordionSummary>
         <AccordionDetails>
         <div>
-          People are welcome to work on their own or on teams of up to 4 people. There will also be a team matching activity for people who are interested!
+          People are welcome to work on their own or on teams of up to 4 people. There will also be a team matching activity for people who are interested! There must be no more than one non-undergraduate student per team.
         </div>
         </AccordionDetails>
       </Accordion>
