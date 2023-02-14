@@ -1,6 +1,5 @@
 import './App.css';
 import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
 import HeroIMG from "./images/bg.jpg"
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
@@ -29,7 +28,6 @@ class Hero extends Component{
                   textAlign: "center",
                   background:"#C33764",
                   background: `linear-gradient(rgba(37, 73, 122, 0.8), rgba(230, 203, 73, 0.8)), url(${HeroIMG})`,
-                  background: `-webkit-linear-gradient(rgba(37, 73, 122, 0.8), rgba(230, 203, 73, 0.8)), url(${HeroIMG})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   fontFamily:"'Source Code Pro', monospace",
@@ -48,14 +46,14 @@ class Hero extends Component{
             >
 
             </TypeWriterEffect>
-            <p style={{fontSize:"75px", padding:"0px", margin:"0px"}}>2021</p>
+            <p style={{fontSize:"75px", padding:"0px", margin:"0px"}}>2023</p>
             <p style={{fontSize:"25px", padding:"10px", margin:"0px",
                       fontFamily:"Arial",
                       paddingRight:"50px",
                       paddingLeft:"50px"}}>
-            <p style={{fontSize:"30px"}}>March 26th-27th</p>
+            <p style={{fontSize:"30px"}}>November 17-18th</p>
             <p style={{fontSize:"18px"}}>
-            <Countdown date={Date.parse('26 Mar 2021 11:00:00 EST')} style={{fontSize:"30px"}}/> until hacking begins.
+            <Countdown date={Date.parse('17 Nov 2023 11:00:00 EST')} style={{fontSize:"30px"}}/> until hacking begins.
             </p>
             </p>
             <Button href="#" color="primary" style={{backgroundColor:"#2b2b2b",
@@ -68,7 +66,7 @@ class Hero extends Component{
                                                                     borderRadius:"50px",
                                                                     paddingLeft:"50px",
                                                                     paddingRight:"50px",
-                                                                  }}>Registration is Closed</Button>
+                                                                  }}>Registration is Open</Button>
           </Grid>
         </Grid>
       </div>
