@@ -1,13 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
 import Hero from "./hero.js"
-import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import Accordian from "./ControlledAccordian.js"
-import Tracks from "./tracks.js";
-import Results from "./results.js"
+import React from 'react';
+import Accordion from "./ControlledAccordion.js"
 import Link from "@material-ui/core/Link";
 import {Helmet} from "react-helmet";
 
@@ -33,16 +28,17 @@ function App(){
               <h2>Design Thinking Initiative Support</h2>
               If you're interested in checking out physical materials (including Arduino Kits) from the Design Thinking Initiative, please sign up to do so <Link href="https://www.librarycat.org/lib/designthinking" style={{color:"#e6cb49"}}>here!</Link> There will be a physical drop-off point for those who are interested.
 
-              <h1>Results</h1>
-                <Results />
-              <h1>Tracks</h1>
-                <Tracks />
-              <h1>Schedule</h1>
-                <img src="https://i.redd.it/zkgrqhutvdp61.png" alt="HackSmith 2021 Schedule" width="600"/>
-              <h1>FAQ</h1>
+              {/*<h1>Results</h1>*/}
+              {/*  <Results />*/}
+              {/*<h1>Tracks</h1>*/}
+              {/*  <Tracks />*/}
+              {/*<h1>Schedule</h1>*/}
+              {/*  <img src="https://i.redd.it/zkgrqhutvdp61.png" alt="HackSmith 2023 Schedule" width="600"/>*/}
+              {/*<h1>FAQ</h1>*/}
               <br />
-              <Accordian />
-
+              <br />
+              <br />
+              <Accordion />
               </p>
             </Grid>
           </Grid>
