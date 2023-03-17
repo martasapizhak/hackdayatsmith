@@ -2,7 +2,7 @@
 
 
 body {
-  margin: 0px !important;
+  margin: 0 !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto','Segoe UI',  'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -23,8 +23,6 @@ code {
 .mainArea {
   padding: 10px;
   margin: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #2b2b2b;
+  /*background-color: #2b2b2b;*/
 
 }
