@@ -1,5 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Sono');
+
+.gradient {
+  width: 100%;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 30%, rgba(26,44,87,  0.8) 50%);
+  background-size: 200% 200%;
+  animation: Animation 10s ease 1;
+}
+
+@keyframes Animation {
+  0% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0;
+  }
+}
+
+
 .App {
   text-align: center;
+}
+
+p {
+  font-family: Sono, monospace;
+}
+
+h1 {
+  font-family: Righteous, monospace;
 }
 
 .App-logo {
@@ -14,7 +41,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /*background-color: #282c34;*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;

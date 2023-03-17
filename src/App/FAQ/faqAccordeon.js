@@ -15,7 +15,7 @@ const styles = theme => ({
   }
 });
 
-function ControlledAccordion(props){
+function FaqAccordeon(props){
   const classes = props;
   const [expanded, setExpanded] = React.useState(false);
 
@@ -115,9 +115,9 @@ function ControlledAccordion(props){
 }
 
 
-ControlledAccordion.propTypes = {
+FaqAccordeon.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
 
-export default withStyles(styles)(ControlledAccordion)
+export default withStyles(styles)(FaqAccordeon)
