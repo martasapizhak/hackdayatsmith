@@ -27,7 +27,7 @@ const rows = [
   createData("SafeTravels", "https://youtu.be/DNxtxZ3mH4E"),
   createData("Zenith", "https://youtu.be/ldUU9PP9ux0"),
   createData("The Unconventional Knitting Pattern Generator", "https://youtu.be/FUJfPbtPJeU?t=1", "Best in Design: 1st Place"),
-  createData("Environmental Hero", "https://youtu.be/7V8L1mhxthE", "Best in Design: Runner up"),
+  createData("Environmental Header", "https://youtu.be/7V8L1mhxthE", "Best in Design: Runner up"),
   createData("Eat You Way Out of COVID-19", "https://www.youtube.com/watch?v=ZXjBvEdu7P4"),
   createData("Breakdown of Boston's Health Inspections ", "https://rpubs.com/veebz/746129"),
   createData("Fighting COVID in America", "https://youtu.be/YH1XJzbkq7s"),

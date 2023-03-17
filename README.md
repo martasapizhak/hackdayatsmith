@@ -1,3 +1,26 @@
+
+### To run the project on new computer:
+Delete the /node_modules directory and the package-lock.json file using the rm command:
+#### `rm -rf node_modules`
+#### `rm -rf package-lock.json`
+
+Install react-scripts using the following command:
+
+#### `npm install react-scripts`
+
+Install the dependencies using the following command:
+#### `npm install`
+Start the local server by running the following command:
+
+#### `npm run start`
+
+If adding elements from material UI and the modules aren't found -
+https://stackoverflow.com/questions/69429172/module-not-found-cant-resolve-mui-material-utils-v5-which-included-a-na
+run 
+#### `npm install @mui/{whatever it couldn't find}
+
+<hr/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
