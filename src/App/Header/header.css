@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Sono');
+
+.main {
+    margin: 6vmin 0;
+    overflow-x: hidden;
+    color: #C7EAFC;
+    font-family: Sono, monospace;
+    min-width: 100vw;
+    background-size: cover;
+}
+
+img {
+    max-height: 50vw;
+}
+
+.title, .name, .year {
+    font-family: Righteous, monospace;
+    font-size: 10vmin;
+    padding: 0;
+}
+
+.name {
+    margin: 0 9vw;
+    font-size: 6vmin;
+}
+
+.year {
+    margin: 0 9vw;
+}
+
+
+.date {
+    font-size: 6vmin;
+    padding: 0;
+    margin: 1vw 0 3vh 9vw ;
+}
+
+.countdown {
+    margin: 3vh auto;
+    font-size: 3vmin;
+}
+
+.button {
+    background-color: #F7F27D;
+    font-size: 3vmin;
+    font-family: 'Righteous', monospace;
+    margin: -0.5vh;
+    color: #2E3440;
+    border-radius: 10px;
+    padding: 1vh 6vw;
+    box-shadow: 0 0 5px #F7F27D;
+}
