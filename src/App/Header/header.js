@@ -19,6 +19,10 @@ class Header extends Component {
                     alignItems={"center"}>
 
                     <Grid item xs={12} sm={12} md={6} lg={8}>
+                        <p align={"left"}
+                           className={"date"}>
+                            November 18-19
+                        </p>
                         <div className={"title"}>
                             <div className={"name"}>
                                 <TypeWriterEffect
@@ -28,23 +32,16 @@ class Header extends Component {
                                     typeSpeed={100}
                                     hideCursorAfterText={true}
                                 >
-                                    <div className={"name"}></div>
                                 </TypeWriterEffect>
                             </div>
 
                             <p align={"left"} className={"year"}>2023</p>
                         </div>
 
-                        <p align={"left"}
-                           className={"date"}>
-                            November 18-19
-                        </p>
                     </Grid>
 
                     <Grid item xs={12} sm={12} md={8} lg={4}>
-                        <div className={"mascot"}>
-                            <img alt={"Neon unicorn mascot"} src={unicornMascot}/>
-                        </div>
+                        <img alt={"Neon unicorn mascot"} src={unicornMascot}/>
                     </Grid>
 
 
@@ -54,7 +51,7 @@ class Header extends Component {
                         </Button>
 
                         <p className={"date countdown"}>
-                            Begins in <Countdown date={Date.parse('18 Nov 2023 11:00 EST')}/>
+                            Release in <Countdown date={Date.parse('1 Sep 2023 11:00 EST')}/>
                         </p>
                     </Grid>
 

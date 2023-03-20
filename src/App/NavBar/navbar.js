@@ -1,97 +1,98 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
-const pages = ["About", "Schedule", "Tracks",  "Prizes", "FAQ", "Speakers", "Sponsors"];
+import './navbar.css'
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
 
-function ResponsiveAppBar() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
+const drawerWidth = 240;
+const navItems = ["About", "Schedule", "Tracks",  "Prizes", "FAQ", "Speakers", "Sponsors"];
+
+function DrawerAppBar(props) {
+    const { window } = props;
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+
+    const handleDrawerToggle = () => {
+        setMobileOpen((prevState) => !prevState);
     };
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+
+    const drawer = (
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+            <List>
+                {navItems.map((item) => (
+                    <ListItem key={item} disablePadding>
+                        <ListItemButton style={{color: "#F7F27D", margin: "1vh 0"}} sx={{ textAlign: 'center'}} >
+                            <ListItemText primary={item} />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+        </Box>
+    );
+
+    const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <AppBar
-            position="sticky"
-            style={{
-                display: "inline",
-                background: "#2E3440"
-                // justify: ""
-        }}>
-            <Container>
-                <Toolbar disableGutters>
-                    {/*phone*/}
-                    <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-                         style={{background: "#2E3440",
-                             color: "#FFFF00"
-                         }}>
-                        <IconButton
-                            size="large"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            styles={{color: "#FFFF00"}}
-                        >
+
+        <Box sx={{ display: 'flex' }}>
+
+            {/* styles have to be inline to work */}
+            <AppBar
+                style={{background: 'transparent', boxShadow: 'none'}}
+                component="nav" >
+                <Toolbar style={{ justifyContent: "flex-end" }}>
+                    <IconButton
+                        aria-label="open drawer"
+                        onClick={handleDrawerToggle}
+                        sx={{ mr: 2, display: { sm: 'none' } }}
+                    >
+                        <div style={{color: "#F7F27D"}} className={"toggle"}>
                             <MenuIcon />
-                        </IconButton>
+                        </div>
+                    </IconButton>
 
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: "bottom",
-                                horizontal: "right"
-                            }}
-                                keepMounted
-                            transformOrigin={{
-                                vertical: "top",
-                                horizontal: "right"
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: "block", md: "none" }
-                            }}
-                            styles={{color: "#FFFF00"}}
-                        >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box>
-
-                    {/*/!*desk*!/*/}
-                    <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }}}>
-                        {pages.map((page) => (
-                            <Button variant="text"
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, display: "block" }}
-                                    style={{color:"#F7F27D",
-                                        fontFamily: "'Righteous', monospace",
-                                    }}
-                            >
-                                {page}
+                    <Box sx={{ display: { xs: 'none', sm: 'block' }, margin: "20px 0"}}>
+                        {navItems.map((item) => (
+                            <Button key={item} style={{color: "#F7F27D", fontFamily:"Righteous, monospace"}}>
+                               {item}
                             </Button>
                         ))}
                     </Box>
 
                 </Toolbar>
-            </Container>
-        </AppBar>
+            </AppBar>
+
+
+            <Box component="nav" >
+                <Drawer
+                    container={container}
+                    variant="temporary"
+                    open={mobileOpen}
+                    onClose={handleDrawerToggle}
+                    ModalProps={{
+                        keepMounted: true, // Better open performance on mobile.
+                    }}
+                    sx={{
+                        display: { xs: 'block', sm: 'none' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                    }}
+                >
+                    <div style={{background:"#576BAA", height: "inherit", display: "grid", alignContent: "center"}}
+                    >{drawer}</div>
+                </Drawer>
+            </Box>
+            <Box component="main" sx={{ p: 3 }}>
+                <Toolbar />
+            </Box>
+        </Box>
     );
 }
-export default ResponsiveAppBar;
+export default DrawerAppBar;

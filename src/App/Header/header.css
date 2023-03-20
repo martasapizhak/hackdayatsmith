@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Sono');
 
 .main {
-    margin: 6vmin 0;
+    /*margin: 6vmin 0;*/
+    padding: 10vh 0 0;
     overflow-x: hidden;
     color: #C7EAFC;
     font-family: Sono, monospace;
@@ -46,7 +47,7 @@ img {
     font-size: 3vmin;
     font-family: 'Righteous', monospace;
     margin: -0.5vh;
-    color: #2E3440;
+    color: rgb(58, 101, 255);
     border-radius: 10px;
     padding: 1vh 6vw;
     box-shadow: 0 0 5px #F7F27D;

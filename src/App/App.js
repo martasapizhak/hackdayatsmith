@@ -1,12 +1,32 @@
 import './App.css';
 import Grid from '@material-ui/core/Grid';
 import Header from "./Header/header.js"
-import Accordion from "./FAQ/faqAccordeon.js"
-import Link from "@material-ui/core/Link";
 import {Helmet} from "react-helmet";
 import * as React from 'react';
-import NavBar from "./NavBar/navbar";
+import campusCenter from "../images/cc.jpg";
+// import {Skeleton} from "@mui/material";
+import Footer from "./Footer/footer"
 export default App;
+
+// const imgHolders = () => {
+//     const imgs = [];
+//
+//     for (let i = 1; i <= 12; i++) {
+//         imgs.push(
+//             <div className="img-holders">
+//                 <Grid item xs={6} sm={6} md={3} lg={3}>
+//                     <Skeleton
+//                         sx={{ bgcolor: 'yellow.900' }}
+//                         variant="rectangular"
+//                         width={210}
+//                         height={118}
+//                     />
+//                 </Grid>
+//             </div>
+//         );
+//     }
+//     return (imgs);
+// };
 
 function App() {
 
@@ -19,58 +39,90 @@ function App() {
                 <title>HackSmith</title>
             </Helmet>
 
-            {/*<img>{unic}</img>*/}
-            {/*old registration link*/}
-            <NavBar></NavBar>
-            <Header class="heroImg"/>
+            {/*<NavBar/>*/}
+            <Header/>
 
-            <div >
-                    {/*trash to figure out how to do this*/}
-                {/*<FormGroup>*/}
-                {/*    <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />*/}
-                {/*    <FormControlLabel disabled control={<Checkbox />} label="Disabled" />*/}
-                {/*</FormGroup>*/}
+            <Grid
+                container spacing={0}
+                alignItems={"center"}>
+                <Grid item xs={12} sm={12} md={7} lg={7}>
+                    <div className={"section"}>
+                        <h1>About</h1>
+                        <p>
+                            <b>Where: Campus Center, Smith College</b><br/><br/>
 
-                <Grid container spacing={1}>
-                    {/*centers the content -- total 12, one in front, one behind*/}
-                    <Grid item xs={1}></Grid>
+                            <b>When: 18-19 November 2023</b><br/><br/>
 
-                    <Grid item xs={10}>
-                        <h1 className={"sectionHeader"}>What is SmithHacks?</h1>
-                        <p>SmithHacks is a virtual 24 hour Smith College hackathon run by Smithies in CS, Smithies in
-                            SDS, and the SDS Coalition of Color. SmithHacks is an opportunity to try out new challenges,
-                            attend workshops, and meet new people. We aim to foster a space for interdisciplinary
-                            creativity.
-                            We've had an unprecedented amount of interest this year and are no longer able to accept new
-                            participants.
-                            <h1>Our Sponsors</h1>
-                            SmithHacks wouldn't be possible without the generosity of Audible, the Conway Center for
-                            Innovation, The Design Thinking Initiative, and MassMutual.
-                            <h1>Design Thinking Initiative Support</h1>
-                            If you're interested in checking out physical materials (including Arduino Kits) from the
-                            Design Thinking Initiative, please sign up to do so <Link
-                                href="https://www.librarycat.org/lib/designthinking"
-                                style={{color: "#e6cb49"}}>here!</Link> There will be a physical drop-off point for
-                            those who are interested.
-
-                            {/*<h1>Results</h1>*/}
-                            {/*  <Results />*/}
-                            {/*<h1>Tracks</h1>*/}
-                            {/*  <Tracks />*/}
-                            {/*<h1>Schedule</h1>*/}
-                            {/*  <img src="https://i.redd.it/zkgrqhutvdp61.png" alt="SmithHacks 2023 Schedule" width="600"/>*/}
-                            {/*<h1>FAQ</h1>*/}
-                            <br/>
-                            <br/>
-                            <br/>
-
-                            {/*FAQ*/}
-                            <Accordion/>
+                            HackSmith is a Smith College hackathon run by Smithies in CS.
+                            SmithHacks is an opportunity to try out new challenges, attend workshops, and meet new
+                            people.
+                            We aim to foster a space for interdisciplinary creativity.
                         </p>
-                    </Grid>
-                    <Grid item xs={1}></Grid>
+                    </div>
                 </Grid>
-            </div>
+                <Grid item xs={12} sm={12} md={5} lg={5}>
+                    <img className={"section-img"} src={campusCenter} alt="Smith College Campus Center photo"/>
+                </Grid>
+            </Grid>
+
+           <Footer/>
+
+            {/*<div className={"section"}>*/}
+            {/*    <h1 align={"center"}>Our Sponsors</h1>*/}
+            {/*    <p>*/}
+            {/*        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur delectus dolorem*/}
+            {/*        est id in molestiae nobis possimus quaerat qui quis similique totam, ut. Est non ratione*/}
+            {/*        repudiandae tempore voluptatem.*/}
+            {/*        SmithHacks wouldn't be possible without the generosity of ....*/}
+            {/*    </p>*/}
+            {/*    <Grid*/}
+            {/*        container spacing={0}*/}
+            {/*        justifyContent={"center"}>*/}
+            {/*        {imgHolders()}*/}
+            {/*    </Grid>*/}
+            {/*/!*</div>*!/*/}
+
+            {/*<Grid*/}
+            {/*    container spacing={0}*/}
+            {/*    justifyContent={"center"}>*/}
+            {/*    <Grid item xs={12}>*/}
+            {/*        <div className={"section"}>*/}
+
+            {/*            <h1>Design Thinking Initiative Support</h1>*/}
+            {/*            <p>*/}
+            {/*                If you're interested in checking out physical materials (including Arduino Kits) from the*/}
+            {/*                Design Thinking Initiative, please sign up to do so <Link*/}
+            {/*                href="https://www.librarycat.org/lib/designthinking"*/}
+            {/*                style={{color: "#e6cb49"}}>here!</Link> There will be a physical drop-off point for*/}
+            {/*                those who are interested.*/}
+            {/*            </p>*/}
+            {/*        </div>*/}
+            {/*    </Grid>*/}
+            {/*</Grid>*/}
+
+            {/*<Grid*/}
+            {/*    container spacing={0}*/}
+            {/*    justifyContent={"center"}>*/}
+            {/*    <Grid item xs={12}>*/}
+            {/*        <div className={"section"}>*/}
+
+            {/*            <h1>Schedule</h1>*/}
+            {/*            <BasicTable/>*/}
+            {/*        </div>*/}
+            {/*    </Grid>*/}
+            {/*</Grid>*/}
+            {/*</div>*/}
+
+            {/*<h1>Results</h1>*/}
+            {/*  <Results />*/}
+            {/*<h1>Tracks</h1>*/}
+            {/*  <Tracks />*/}
+            {/*<h1>Schedule</h1>*/}
+            {/*  <img src="https://i.redd.it/zkgrqhutvdp61.png" alt="SmithHacks 2023 Schedule" width="600"/>*/}
+            {/*<h1>FAQ</h1>*/}
+            {/*FAQ*/}
+            {/*<Accordion/>*/}
+            {/*<BasicSpeedDial/>*/}
         </div>
     );
 }
